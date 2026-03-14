@@ -123,7 +123,7 @@ function Navbar({ focusMode, onToggleFocus, onTimerStateChange, forcePause }) {
       borderBottom: '1px solid rgba(255,255,255,0.07)',
       boxShadow: '0 1px 40px rgba(0,0,0,0.4)',
     }}>
-      <div style={{ maxWidth: 1400, margin: '0 auto', padding: '0 28px', height: 62, display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 12 }}>
+      <div className="max-w-[1400px] mx-auto px-4 sm:px-7 min-h-[62px] py-2 flex flex-wrap sm:flex-nowrap items-center justify-between gap-3">
         {/* Brand */}
         <div onClick={() => navigate('/dashboard')} style={{ display: 'flex', alignItems: 'center', gap: 10, cursor: 'pointer', flexShrink: 0 }}>
           <div style={{ width: 30, height: 30, borderRadius: '50%', background: 'linear-gradient(135deg,#3B82F6,#8B5CF6)', boxShadow: '0 0 20px rgba(139,92,246,0.5)' }} />

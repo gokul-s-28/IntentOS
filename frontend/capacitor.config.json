@@ -1,0 +1,6 @@
+{
+  "appId": "com.intentos.app",
+  "appName": "IntentOS",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

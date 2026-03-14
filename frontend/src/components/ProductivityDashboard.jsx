@@ -30,7 +30,7 @@ function ScoreGauge({ score }) {
   return (
     <div className="flex flex-col items-center">
       <div className="relative w-48 h-48">
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer width="100%" height="100%" minWidth={1}>
           <RadialBarChart
             innerRadius="70%"
             outerRadius="100%"
@@ -90,7 +90,7 @@ function HistoryChart({ sessions }) {
   return (
     <div>
       <p className="text-xs text-slate-400 font-semibold mb-2">Last {data.length} Sessions</p>
-      <ResponsiveContainer width="100%" height={160}>
+      <ResponsiveContainer width="100%" height={160} minWidth={1}>
         <BarChart data={data} barCategoryGap="30%">
           <CartesianGrid strokeDasharray="3 3" stroke="#334155" />
           <XAxis dataKey="name" tick={{ fontSize: 10, fill: '#64748b' }} />

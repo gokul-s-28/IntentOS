@@ -85,8 +85,8 @@ function HomePage() {
       {/* Minimal top bar */}
       <div style={{
         position: 'fixed', top: 0, left: 0, right: 0, zIndex: 50,
-        padding: '16px 32px',
-        display: 'flex', justifyContent: 'space-between', alignItems: 'center',
+        padding: '12px 16px',
+        display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '10px'
       }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
           <div style={{
@@ -280,7 +280,12 @@ export default function App() {
   return (
     <AuthProvider>
       <IntentProvider>
-        <Router>
+        <Router
+          future={{
+            v7_startTransition: true,
+            v7_relativeSplatPath: true,
+          }}
+        >
           <AppRoutes />
         </Router>
       </IntentProvider>

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">IntentOS</string>
+    <string name="title_activity_main">IntentOS</string>
+    <string name="package_name">com.intentos.app</string>
+    <string name="custom_url_scheme">com.intentos.app</string>
+</resources>

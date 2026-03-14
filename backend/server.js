@@ -56,10 +56,8 @@ app.get('/api/health', (req, res) => {
 // ──────────────────────────────
 app.use(errorHandler);
 
-// Bind to a fixed port to avoid clashing with any other app configuration.
-// We intentionally ignore process.env.PORT here so the frontend proxy can rely
-// on a stable backend URL.
-const PORT = 5001;
+// Bind to a dynamic port if provided by host, else fallback to 5001.
+const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
   console.log(`🚀 IntentOS Server running on http://localhost:${PORT}`);
 });

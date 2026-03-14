@@ -191,7 +191,7 @@ export default function AnalyticsPage() {
                 title="Quiz Performance"
                 subtitle="Score per study session (out of 10)"
               >
-                <ResponsiveContainer width="100%" height={240}>
+                <ResponsiveContainer width="100%" height={240} minWidth={1}>
                   <BarChart data={quizData} barCategoryGap="35%">
                     <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
                     <XAxis dataKey="name" tick={{ fontSize: 11, fill: '#94a3b8' }} />
@@ -211,7 +211,7 @@ export default function AnalyticsPage() {
                 title="Video Learning Activity"
                 subtitle="Videos watched per day"
               >
-                <ResponsiveContainer width="100%" height={240}>
+                <ResponsiveContainer width="100%" height={240} minWidth={1}>
                   <LineChart data={videoData}>
                     <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
                     <XAxis dataKey="name" tick={{ fontSize: 11, fill: '#94a3b8' }} />
@@ -233,7 +233,7 @@ export default function AnalyticsPage() {
                 subtitle={`Average completion: ${avgProgress}%`}
               >
                 <div className="flex items-center gap-6">
-                  <ResponsiveContainer width="55%" height={220}>
+                  <ResponsiveContainer width="55%" height={220} minWidth={1}>
                     <PieChart>
                       <Pie
                         data={pieData}
@@ -273,7 +273,7 @@ export default function AnalyticsPage() {
                 title="Focus Mode Usage"
                 subtitle="Minutes in focused study per session"
               >
-                <ResponsiveContainer width="100%" height={240}>
+                <ResponsiveContainer width="100%" height={240} minWidth={1}>
                   <AreaChart data={focusData}>
                     <defs>
                       <linearGradient id="focusGrad" x1="0" y1="0" x2="0" y2="1">
@@ -302,7 +302,7 @@ export default function AnalyticsPage() {
                 title="AI Companion Usage"
                 subtitle="Number of questions asked per session"
               >
-                <ResponsiveContainer width="100%" height={240}>
+                <ResponsiveContainer width="100%" height={240} minWidth={1}>
                   <BarChart data={aiData} barCategoryGap="35%">
                     <CartesianGrid strokeDasharray="3 3" stroke="#f1f5f9" />
                     <XAxis dataKey="name" tick={{ fontSize: 11, fill: '#94a3b8' }} />
@@ -319,7 +319,7 @@ export default function AnalyticsPage() {
                 title="Session Overview"
                 subtitle="Score · Focus · AI Questions across all sessions"
               >
-                <ResponsiveContainer width="100%" height={240}>
+                <ResponsiveContainer width="100%" height={240} minWidth={1}>
                   <LineChart data={records.map((r, i) => ({
                     name:    `S${i + 1}`,
                     Score:   r.score,
